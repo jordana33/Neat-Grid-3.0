@@ -1,9 +1,159 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {box-sizing: border-box;}
 @import "neat";
 
-p {
-  background-color: red;
-  @include grid-column(6);
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+@mixin show-block {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid lightgrey;
+}
+
+section p, section nav, section main {
+  overflow: hidden;
+  margin:0;
+  min-height: 10em;
+  @include show-block;
+}
+
+.grid-container {
+  @include grid-container;
+  @include grid-visual;
+ }
+
+.grid-collapse {
+  @include grid-collapse;
+  @include grid-container;
+  @include grid-visual(pink);
+ }
+
+.demo {
+  .default-grid-1 {
+    p {
+      @include grid-column(2);
+    }
+  }
+
+  .default-grid-2 {
+    p {
+      @include grid-column(1);
+    }
+
+    p.wide {
+      @include grid-column(2);
+    }
+
+    p.extra-wide {
+      @include grid-column(3);
+    }
+  }
+
+  .grid-shift {
+    p {
+      @include grid-column(2);
+    }
+
+    p.cell-3 {
+      @include grid-shift(1);
+    }
+
+    p.cell-6 {
+      @include grid-shift(-2);
+    }
+
+    p.cell-5 {
+     @include grid-shift(2);
+    }
+  }
+
+  .grid-push {
+    p {
+      @include grid-column(2);
+    }
+
+    p.cell-3 {
+      @include grid-push(1);
+    }
+
+    p.cell-10 {
+      @include grid-push(-2);
+    }
+  }
+
+  .grid-nested {
+     .grid-container > div {
+      @include grid-column(3);
+      min-height: 10em;
+      @include show-block;
+    }
+    p {
+      @include grid-column(6);
+    }
+  }
+
+  .custom-grid {
+    $my-nested-grid: (
+        columns: 4,
+        gutter: 5px,
+      );
+
+     .grid-container > div {
+      @include grid-column(3);
+      min-height: 10em;
+      @include show-block;
+    }
+
+    .custom-collapse {
+      @include grid-collapse($my-nested-grid);
+      }
+
+    p {
+      @include grid-column(2, $my-nested-grid);
+    }
+  }
+
+  .media-query-1 {
+    p {
+      @include grid-column(2);
+      @media screen and (max-width: 1024px) {
+        @include grid-column(6);
+      }
+      @media screen and (max-width: 620px) {
+        @include grid-column(12);
+      }
+    }
+  }
+
+  .media-query-2 {
+    $my-phone-grid: (
+      columns: 4,
+      gutter: 5px,
+      media: "(max-width: 620px)",
+    );
+
+    $my-tablet-grid: (
+      gutter: 10px,
+      media: "(min-width: 621px) and (max-width: 1024px)",
+    );
+
+    p {
+      @include grid-column(2);
+    }
+    @include grid-media ($my-tablet-grid) {
+      p {
+        @include grid-column(3);
+      }
+    }
+    @include grid-media ($my-phone-grid) {
+      p {
+        @include grid-column(2);
+      }
+    }
+  }
 }
