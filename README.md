@@ -1,4 +1,8 @@
+# Neat Grid Lab Session 2/6/2019
+
+# Talk Notes:
 Neat Grid documentation: https://neat.bourbon.io/docs/latest/
+
 Good Tutorial:
 https://robots.thoughtbot.com/the-release-of-neat-2-0-a-lightweight-and-flexible-sass-grid
 
