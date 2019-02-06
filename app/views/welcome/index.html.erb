@@ -1,7 +1,7 @@
 <div class="demo">
 	<ul>
 		<li>
-			Many of the classes in these examples are named non-semantically (e.g. .grid-container, .extra-wide) However, Thoughtbot's frameworks use mixins instead of classes deliberately.  The idea being that using mixins gives us the opportunity to use more semantic names for our classes (e.g. .search-filters, .date-filter).
+			Many of the classes in these examples are named non-semantically (e.g. .grid-container, .extra-wide) However, Thoughtbot's frameworks use mixins instead of classes deliberately to help avoid this.  Using mixins gives us the opportunity to use more semantic names for our classes (e.g. .search-filters, .date-filter).
 		</li>
 	</ul>
 
@@ -19,7 +19,7 @@
 	</section>
 	<ul>
 		<li>
-			We could put the paragraph tags directly under the H1 and it would work 98% of the time but it is best practice with Neat 3 to have all of the children of a container be a grid element.  This wasn't needed in Neat 1 and you will see a lot of places in Guide where it isn't currently true
+			We could put the paragraph tags directly under the H1 and it would work 98% of the timep.  However, it is a good idea to have all of the children of a grid container be a grid element.  This wasn't needed in Neat 1 and you will see places in Guide where it isn't currently true.
 		</li>
 	</ul>
 
@@ -40,7 +40,7 @@
 	</section>
 	<ul>
 		<li>
-			Note that there are no rows defined here.  These paragraph tags are floated and the default behavior for float is that it will wrap to the next line if it can't fit.  We do define rows sometimes with our grid layouts.  They should only be needed if we are intentionally grouping rows together that would otherwise fit on one row.
+			Note that there are no rows defined here.  These paragraph tags are floated and the default behavior for float is that it will wrap to the next line if it can't fit.  We do define rows sometimes with our grid layouts when we don't need to.  They should only be added if we are intentionally seperating elements into rows for design purposes.
 		</li>
 	</ul>
 
@@ -82,7 +82,7 @@
 	</section>
 	<ul>
 		<li>
-			Grid push adds extra margin in order to push a column in one direction or another.  It is useful for adding negative space in design.
+			Grid push adds extra margin in order to push a column in one direction or another.  It is useful for adding negative space in a grid.
 		</li>
 	</ul>
 
@@ -108,7 +108,7 @@
 	</section>
 	<ul>
 		<li>
-			Grid push adds extra margin in order to push a column in one direction or another.  It is useful for adding negative space in design.
+			Grids can be nested within grids!
 		</li>
 	</ul>
 
@@ -134,7 +134,7 @@
 	</section>
 	<ul>
 		<li>
-			In the previous example There is a lot of space between the half columns. What If I don't want 12 columns within that nested grid?  Or that much of a gutter?  This example uses a custom grid definition for the nested grid.
+			In the previous example There is a lot of space between the half columns. What If I don't want 12 column grid with a 20px margin for that nested grid?  This example uses a custom grid definition for the nested grid.
 		</li>
 	</ul>
 
