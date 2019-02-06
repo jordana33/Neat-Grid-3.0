@@ -2,7 +2,7 @@ Neat Grid documentation: https://neat.bourbon.io/docs/latest/
 Good Tutorial:
 https://robots.thoughtbot.com/the-release-of-neat-2-0-a-lightweight-and-flexible-sass-grid
 
-##What is a Grid System?
+## What is a Grid System?
 * Web learned about grid systems from print mediums.  Check out  https://99designs.com/blog/tips/history-of-the-grid-part-1/ for a history of grid systems.
 * CSS wasn't originally created by visual designers and and it has lacked fairly basic layout out tools.  Flexbox and CSS grids were meant to be released together and someday when IE11 is gone we will have a lot more layout flexibility.  In the meantime...we've been using various types of grid system frameworks for a long time.
 * Grid systems started to become popular when we moved away from fixed width designs and table based layouts.  Once responsive was born they became even more popular.  Many places have adopted larger frameworks like Bootstrap or Foundation primarily to get a grid-system.
