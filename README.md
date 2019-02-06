@@ -31,5 +31,5 @@ Neat is a Push-left-grid.  The author lists these as the advantages:
 * It saves time
 * It can make things easier for the next engineer to look at the code. If I see a mixin called grid-column(3) I understand what is happening.  A float, a left-margin, and a calculated width declaration in the midst of 6 other styles is unlikely to do that.
 * It works well across our supported browsers.
-##When should we use Neat grid?
+## When should we use Neat grid?
 * Any time you have a block level element that you want to break into columns. (particularly if the columns need to behave differently in a responsive setting)
